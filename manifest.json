@@ -1,0 +1,42 @@
+{
+	"manifest_version": 2,
+	"name": "Аудиокниги.Клуб Ассистент",
+	"description": "Ассистент для упрощения работы с плеером сайта Аудиокниги.Клуб",
+	"version": "1.0.0",
+	"permissions": [
+		"tabs",
+		"*://audioknigi.club/*"
+	],
+	"icons": {
+		"16": "img/icon16.png",
+		"32": "img/icon32.png",
+		"128": "img/icon.png"
+	},
+	"browser_action": {
+		"default_icon": "img/icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://audioknigi.club/*"
+			],
+			"js": [
+				"js/main.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"commands": {
+		"toggle-play": {
+			"suggested_key": {
+				"default": "Ctrl+Q"
+			},
+			"description": "Play/Pause",
+			"global": true
+		}
+	}
+}
