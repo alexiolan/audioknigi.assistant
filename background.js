@@ -1,5 +1,6 @@
 var status = 'pause';
-var websiteUrl = 'https://audioknigi.club';
+var websitePart = 'https://audioknigi.';
+var websiteUrl = 'https://audioknigi.online';
 
 chrome.browserAction.setIcon({ path: "img/icon.png" });
 chrome.browserAction.setBadgeBackgroundColor({
@@ -38,7 +39,7 @@ function togglePlay(tab) {
 function onToggleAction() {
   chrome.tabs.query({}, function (tabs) {
     var audioTab = tabs.filter(function (tab) {
-      return tab.url.includes(websiteUrl)
+      return tab.url.includes(websitePart)
     });
 
     if (audioTab.length) {
