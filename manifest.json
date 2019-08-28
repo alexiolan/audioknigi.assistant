@@ -2,11 +2,11 @@
 	"manifest_version": 2,
 	"name": "Аудиокниги.Клуб Ассистент",
 	"description": "Ассистент для упрощения работы с плеером сайта Аудиокниги.Клуб",
-	"version": "1.0.0",
-	"permissions": [
-		"tabs",
-		"*://audioknigi.club/*"
-	],
+	"version": "1.0.1",
+  "permissions": [
+    "tabs",
+    "*://aknigi.club/*"
+  ],
 	"icons": {
 		"16": "img/icon16.png",
 		"32": "img/icon32.png",
@@ -17,12 +17,13 @@
 	},
 	"content_scripts": [
 		{
-			"matches": [
-				"https://audioknigi.club/*"
-			],
-			"js": [
-				"js/main.js"
-			]
+      "matches": [
+        "https://aknigi.club/*"
+      ],
+      "js": [
+        "js/main.js",
+        "js/toggle.js"
+      ]
 		}
 	],
 	"background": {
