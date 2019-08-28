@@ -21,8 +21,7 @@
         "https://aknigi.club/*"
       ],
       "js": [
-        "js/main.js",
-        "js/toggle.js"
+        "js/main.js"
       ]
 		}
 	],

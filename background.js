@@ -19,7 +19,7 @@ function updateBadge() {
 
 function togglePlay(tab) {
     chrome.tabs.executeScript(tab.id, {
-        "file": "js/toggle.js"
+        code: "AssistantModule.Toggle()"
     });
 }
 
@@ -47,7 +47,11 @@ chrome.commands.onCommand.addListener(function (command) {
     }
 });
 
-chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
-    status = request;
-    updateBadge();
-});
+// TODO: Fix later
+//chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
+//    if (request === 'toggle') {
+//        status = status === 'play' ? 'pause' : 'play';
+
+//        updateBadge();
+//    }
+//});
