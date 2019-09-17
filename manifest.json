@@ -2,10 +2,10 @@
 	"manifest_version": 2,
 	"name": "Аудиокниги.Клуб Ассистент",
 	"description": "Ассистент для упрощения работы с плеером сайта Аудиокниги.Клуб",
-	"version": "1.0.3",
+	"version": "1.0.4",
   "permissions": [
     "tabs",
-    "*://aknigi.club/*"
+    "*://akniga.org/*"
   ],
 	"icons": {
 		"16": "img/icon16.png",
@@ -18,7 +18,7 @@
 	"content_scripts": [
 		{
       "matches": [
-        "https://aknigi.club/*"
+        "https://akniga.org/*"
       ],
       "js": [
         "js/main.js"
