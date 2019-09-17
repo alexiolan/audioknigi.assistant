@@ -1,5 +1,5 @@
 var status = 'pause';
-var websiteUrl = 'https://aknigi.club';
+var websiteUrl = 'https://akniga.org';
 
 chrome.browserAction.setIcon({ path: "img/icon.png" });
 chrome.browserAction.setBadgeBackgroundColor({
